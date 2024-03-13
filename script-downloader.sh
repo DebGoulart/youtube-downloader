@@ -58,7 +58,7 @@ read
 # Menu de opções
 
 clear
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Escolha uma das seguintes opções:
 
@@ -68,7 +68,7 @@ Escolha uma das seguintes opções:
 4- Conversor
 5- Sair
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 "
 read -p "Digite o número correspondente à opção desejada: " option
 
