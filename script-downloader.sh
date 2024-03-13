@@ -10,7 +10,8 @@ if ! command -v curl &> /deb/null; then
     apt install -y curl
 fi
 
-if ! command -v ffmpeg &> /dev/null; then                                                  apt install -y ffmpeg
+if ! command -v ffmpeg &> /dev/null; then
+    apt install -y ffmpeg
 fi
 
 if ! wget -q --spider www.google.com; then
