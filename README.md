@@ -11,7 +11,7 @@ Este é um script em Shell Script que permite baixar vídeos, áudios e playlist
  
 ## Pré-requisitos
 
-- Sistema operacional Linux ou WSL.
+- Sistema operacional Linux [Baseados em Debian] ou WSL.
 
 OBS: Para quem possui sistema operacional Windows, existem diversos tutoriais de como instalar o WSL.
 
@@ -24,14 +24,14 @@ OBS: Para quem possui sistema operacional Windows, existem diversos tutoriais de
 3. Abra o terminal.
 
 4. Modifique as permissões do arquivo:
-    '''bash
+    ```bash
     chmod +x script-downloader.sh
-    '''
+    ```
 
 5. Execute o comando:
-    '''bash
+    ```bash
     ./script-downloader
-    '''
+    ```
 
 ## Aviso 🛑
 

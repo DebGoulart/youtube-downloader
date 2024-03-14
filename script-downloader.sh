@@ -4,7 +4,7 @@
 
 [ "$UID" -ne "0" ] && { echo "/nNecessita de root para executar o programa..." ; exit; }
 
-if ! command -v curl &> /deb/null; then
+if ! command -v curl &> /dev/null; then
     echo "Instalando dependencias..."
     sleep 1s
     apt install -y curl
@@ -52,14 +52,14 @@ Para converter arquivos, o programa suporta as seguintes opções de conversão:
         - Conversão de áudio: mp3, m4a, wav
 "
 
-sleep 1s
+sleep 3s
 echo "Pressione ENTER para continuar..."
 read
 
 # Menu de opções
 
 clear
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Escolha uma das seguintes opções:
 
@@ -69,7 +69,7 @@ Escolha uma das seguintes opções:
 4- Conversor
 5- Sair
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 "
 read -p "Digite o número correspondente à opção desejada: " option
 
@@ -89,8 +89,7 @@ case $option in
 
         yt-dlp -x --audio-format "$audio_type" "$audio_link" -o "%(title)s.%(ext)s"
 
-	downloaded_file="$(yt-dl
-    p --get-filename -o "%(title)s.%(ext)s" "$audio_link")"
+	downloaded_file="$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$audio_link")"
 	
 	file_name="${downloaded_file%.*}"
 
@@ -107,7 +106,7 @@ case $option in
 
     4)
         clear
-        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
         Qual tipo de arquivo deseja converter?
 
@@ -115,7 +114,7 @@ case $option in
         2- Áudio
         3- Sair
 
-        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         "
         read -p "Digite o número correspondente à opção desejada: " convert_option
 
