@@ -1,6 +1,6 @@
 # Youtuber downloader e conversor
 
-Este é um script em Shell Script que permite baixar vídeos, áudios e playlists do YouTube, além de converter os arquivos utilizando o yt-dlp.
+Este é um script em Shell Script que permite baixar vídeos, áudios e playlists do YouTube, além de converter os arquivos utilizando o [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 ## Funcionalidades
 
