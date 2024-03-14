@@ -8,7 +8,7 @@ if ! command -v curl &> /dev/null; then
     if command -v apt &> /dev/null; then
         apt install -y curl
     elif command -v pacman &> /dev/null; then
-        pacman -S install --noconfirm curl
+        pacman -S --noconfirm curl
     elif command -v dnf &> /dev/null; then
         dnv install -y curl
     else
@@ -24,7 +24,7 @@ if ! command -v ffmpeg &> /dev/null; then
     if command -v apt &> /dev/null; then
         apt install -y ffmpeg
     elif command -v pacman &> /dev/null; then
-        pacman -S install --noconfirm ffmpeg
+        pacman -S --noconfirm ffmpeg
     elif command -v dnf &> /dev/null; then
         dnf install -y ffmpeg
     else
