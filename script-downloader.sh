@@ -5,13 +5,40 @@
 [ "$UID" -ne "0" ] && { echo "/nNecessita de root para executar o programa..." ; exit; }
 
 if ! command -v curl &> /dev/null; then
-    echo "Instalando dependencias..."
-    sleep 1s
-    apt install -y curl
+    if command -v apt &> /dev/null; then
+        apt install -y curl
+    elif command -v pacman &> /dev/null; then
+        pacman -S install --noconfirm curl
+    elif command -v dnf &> /dev/null; then
+        dnv install -y curl
+    else
+        echo "Não foi possível determinar o gerenciador de pacotes adequeado para seu sistema operacional. 
+        
+        Instale o ffmpeg manualmente, por favor
+        "
+        exit 1
+    fi
 fi
 
 if ! command -v ffmpeg &> /dev/null; then
-    apt install -y ffmpeg
+    if command -v apt &> /dev/null; then
+        apt install -y ffmpeg
+    elif command -v pacman &> /dev/null; then
+        pacman -S install --noconfirm ffmpeg
+    elif command -v dnf &> /dev/null; then
+        dnf install -y ffmpeg
+    else
+        echo "Não foi possível determinar o gerenciador de pacotes adequeado para seu sistema operacional. 
+        
+        Instale o ffmpeg manualmente, por favor
+        "
+        exit 1
+    fi
+fi
+
+if ! command -v ffmpeg &> /dev/null; then
+    echo "Erro ao instalar o ffmpeg. Por favor, instale manualmente."
+    exit 1
 fi
 
 if ! wget -q --spider www.google.com; then
@@ -25,8 +52,8 @@ fi
 if ! command -v yt-dlp &> /dev/null; then
     echo "Instalando o programa..."
     sleep 1s
-    sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-    sudo chmod a+rx /usr/local/bin/yt-dlp
+    curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+    chmod a+rx /usr/local/bin/yt-dlp
 fi
 
 # Instruções ao usuário
