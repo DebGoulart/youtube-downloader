@@ -11,7 +11,7 @@ Este é um script em Shell Script que permite baixar vídeos, áudios e playlist
  
 ## Pré-requisitos
 
-- Sistema operacional Linux [Baseados em Debian, Ubuntu, Fedora e Arch Linux] ou WSL.
+- Sistema operacional Linux *[Baseados em Debian, Ubuntu, Fedora e Arch Linux]* ou WSL.
 
 OBS: Para quem possui sistema operacional Windows, existem diversos tutoriais de como instalar o WSL.
 
