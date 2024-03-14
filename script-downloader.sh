@@ -10,7 +10,8 @@ if ! command -v curl &> /deb/null; then
     apt install -y curl
 fi
 
-if ! command -v ffmpeg &> /dev/null; then                                                  apt install -y ffmpeg
+if ! command -v ffmpeg &> /dev/null; then
+    apt install -y ffmpeg
 fi
 
 if ! wget -q --spider www.google.com; then
@@ -51,7 +52,7 @@ Para converter arquivos, o programa suporta as seguintes opções de conversão:
         - Conversão de áudio: mp3, m4a, wav
 "
 
-sleep 3s
+sleep 1s
 echo "Pressione ENTER para continuar..."
 read
 
@@ -88,7 +89,8 @@ case $option in
 
         yt-dlp -x --audio-format "$audio_type" "$audio_link" -o "%(title)s.%(ext)s"
 
-	downloaded_file="$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$audio_link")"
+	downloaded_file="$(yt-dl
+    p --get-filename -o "%(title)s.%(ext)s" "$audio_link")"
 	
 	file_name="${downloaded_file%.*}"
 
