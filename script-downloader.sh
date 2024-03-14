@@ -107,7 +107,7 @@ case $option in
 
     4)
         clear
-        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
         Qual tipo de arquivo deseja converter?
 
@@ -115,7 +115,7 @@ case $option in
         2- Áudio
         3- Sair
 
-        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         "
         read -p "Digite o número correspondente à opção desejada: " convert_option
 

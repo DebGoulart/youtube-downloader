@@ -11,7 +11,7 @@ Este é um script em Shell Script que permite baixar vídeos, áudios e playlist
  
 ## Pré-requisitos
 
-- Sistema operacional Linux ou WSL
+- Sistema operacional Linux ou WSL.
 
 OBS: Para quem possui sistema operacional Windows, existem diversos tutoriais de como instalar o WSL.
 
@@ -39,5 +39,5 @@ O conversor de vídeo pode ser um pouco (muito) demorado dependendo do tamanho d
 
 ## Autores
 
-- [Deborah Goulart](https://github.com/DebGoulart) - Desenvolvedora
+- [Deborah Goulart](https://github.com/DebGoulart) - Desenvolvedora.
 
